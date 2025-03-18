@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Style for heart elements */
+span {
+  background: url("https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-256.png");
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  background-size: cover;
+  animation: animate 3s linear; /* ✅ Ensure animation applies */
+}
+
+/* Keyframes for heart animation */
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    filter: hue-rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2); /* ✅ Hearts scale up */
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}
